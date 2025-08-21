@@ -1,0 +1,28 @@
+<% layout('layout') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title><%= title || "SSR Weaviate + Ollama" %></title>
+  <style>
+    body { margin: 0 auto; max-width: 900px; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; padding: 24px; line-height: 1.5; }
+    header { margin-bottom: 24px; }
+    form input[type="text"] { width: 100%; padding: 10px; font-size: 16px; }
+    .btn { appearance: none; border: 1px solid #333; background: #fff; padding: 8px 14px; cursor: pointer; }
+    .error { background: #fee; border: 1px solid #f99; padding: 10px; margin: 10px 0; }
+    .metrics { background: #f7f7f7; padding: 10px; border: 1px solid #ddd; margin: 16px 0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .carousel { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px 0; }
+    .card { min-width: 320px; border: 1px solid #ddd; border-radius: 8px; padding: 12px; background: #fff; scroll-snap-align: start; }
+    .small { color: #666; font-size: 12px; }
+    .answer { white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SSR Weaviate → Ollama</h1>
+    <p class="small">Backend-only calls. Renders server-side with a chunk carousel + metrics.</p>
+  </header>
+  <%- body %>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<% layout('layout') %>
+
+<section>
+  <form method="POST" action="/search">
+    <input type="text" name="q" placeholder="Ask something..." value="<%- userQuery %>" />
+    <div style="margin-top: 10px;">
+      <button class="btn" type="submit">Search Again</button>
+    </div>
+  </form>
+</section>
+
+<section>
+  <h2>Answer</h2>
+  <div class="answer"><%- answer %></div>
+
+  <h3 style="margin-top: 24px;">Metrics</h3>
+  <div class="metrics">
+<pre><%= JSON.stringify(metrics, null, 2) %></pre>
+  </div>
+
+  <h3>Retrieved Chunks (Carousel)</h3>
+  <div class="carousel" aria-label="retrieved-chunks-carousel">
+    <% chunks.forEach((c, i) => { %>
+      <article class="card">
+        <div class="small">#<%= i + 1 %> • id: <%= c.id %></div>
+        <div class="small">score: <%= c.score ?? 'n/a' %>&nbsp;&nbsp;distance: <%= c.distance ?? 'n/a' %></div>
+        <p><%- c.text %></p>
+      </article>
+    <% }) %>
+  </div>
+</section>

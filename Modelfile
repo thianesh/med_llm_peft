@@ -1,0 +1,2 @@
+FROM hf.co/mradermacher/MedEmbed-large-v0.1-GGUF:Q4_K_M
+# No chat template needed; we’ll use the embeddings API

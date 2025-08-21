@@ -1,0 +1,14 @@
+FROM ./unsloth.Q4_K_M.gguf
+
+# Basic chat template (no special tokens). If your GGUF is an *instruct* build
+# that expects specific roles/tokens, replace this with that format.
+TEMPLATE """
+{{- if .System }}System: {{ .System }}{{ end }}
+
+User: {{ .Prompt }}
+
+Assistant: """
+# Common runtime knobs (tweak as you like)
+PARAMETER temperature 0.2
+PARAMETER top_p 0.9
+PARAMETER repeat_penalty 1.1

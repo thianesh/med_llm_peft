@@ -1,0 +1,18 @@
+<% layout('layout') %>
+
+<section>
+  <form method="POST" action="/search">
+    <input type="text" name="q" placeholder="Ask something..." value="<%- defaultQuery %>" />
+    <div style="margin-top: 10px;">
+      <button class="btn" type="submit">Search (Weaviate → Ollama)</button>
+    </div>
+  </form>
+
+  <% if (error) { %>
+    <div class="error"><%= error %></div>
+  <% } %>
+
+  <p class="small" style="margin-top: 24px;">
+    Tip: adjust <code>.env</code> to match your Weaviate class/prop and your Ollama model.
+  </p>
+</section>
