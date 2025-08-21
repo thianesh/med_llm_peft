@@ -36,9 +36,7 @@ RAG chunking, embedding and upserting: file
 .\rag\save_waveate.ipynb
 ```
 ## Hosting
-I've already exhaused GCP and AWS, 
-<br>
-so, self hosted in local.
+self hosted in local.
 - localmachine -> VPN -> Domain
 
 ### Steps followed:
