@@ -44,3 +44,6 @@ self hosted in local.
 2. Modelfile is created for ollama for downloaded model
 3. Install the model in ollama using the model file.
 ![alt text](image-1.png)
+
+### Previewing in verba
+![alt text](image-3.png)
