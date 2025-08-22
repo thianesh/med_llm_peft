@@ -47,3 +47,10 @@ self hosted in local.
 
 ### Previewing in verba
 ![alt text](image-3.png)
+
+## Deployment in Fast API
+Process:
+1. User query rewriting for better retreival
+2. Search for top K in vector DB
+3. Provide the relevant answer
+![alt text](image-2.png)
