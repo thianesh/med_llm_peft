@@ -54,3 +54,6 @@ Process:
 2. Search for top K in vector DB
 3. Provide the relevant answer
 ![alt text](image-2.png)
+
+## Testing Suit
+Yet to be build
