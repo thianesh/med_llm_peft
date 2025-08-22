@@ -3,12 +3,20 @@ services:
     image: semitechnologies/weaviate:1.26.7
     command: ["--host","0.0.0.0","--port","8080","--scheme","http"]
     ports:
-      - "8080:8080"
-      - "50051:50051"
+      - "8080:8080"    # HTTP
+      - "50051:50051"  # gRPC
     environment:
       AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: "true"
       QUERY_DEFAULTS_LIMIT: "25"
+      ENABLE_MODULES: "text2vec-ollama,generative-ollama"
+      TEXT2VEC_OLLAMA_ENDPOINT: "http://host.docker.internal:11434"
+      GENERATIVE_OLLAMA_ENDPOINT: "http://host.docker.internal:11434"
+      MODULES_CLIENT_TIMEOUT: "120s"
     restart: unless-stopped
+    # Only needed if you're on Linux and Ollama runs on the host
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
 
   # verba:
   #   image: semitechnologies/verba:latest
