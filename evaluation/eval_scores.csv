@@ -1,0 +1,40 @@
+answer,ground_truth,reason,score
+<|comp|Report the physician to the ethics committee,Tell the attending that he cannot fail to disclose this mistake,The resident must uphold ethical standards and transparency regarding patient care.,3
+124,Cross-linking of DNA,The answer aligns with the ground truth regarding chemotherapy's mechanism of action.,5
+"2 weeks after undergoing an emergency cardiac catherization for unstable angina pectoris, the patient presented with decreased urinary output and malaise. His symptoms were initially controlled with a multivitamin, but he developed generalized malaise and weakness after a few days. The patient was started on fluticasone, clopidogrel, and metoprolol, but his symptoms persisted. A detailed workup revealed an obstructive nodule in the left renal artery. Despite this, the patient was given an additional 24-hour course of the antibiotic used in the initial treatment of the cardiac event. Which of the following is most likely to occur as a side effect of the drug administered to the patient?""
+
+Options:
+{'A': 'Decreased renal blood flow', 'B': 'Increased serum ampicillin resistance', 'C': 'Decreased serum tetracycline absorption', 'D': 'Increased chance of hemolytic anemia', 'E': 'Decreased serum propranolol absorption'}
+  <|comp|>Decreased chance of hemolytic anemia",Cholesterol embolization,"The patient's presentation with intravascular vacuoles on renal biopsy, coupled with the history of cardiac catheterization, strongly suggests cholesterol embolization.",5
+"<|comp|>Lactose-fermenting, gram-negative rods forming pink colonies on MacConkey agar","Lactose-fermenting, gram-negative rods forming pink colonies on MacConkey agar",The answer matches the ground truth in terms of organism identification.,5
+"Based on the patient's symptoms and the options provided, the best treatment would be to use warm compresses (Option C). This is a common treatment for itchy, watery eyes as it reduces inflammation and swelling without requiring ointments that might worsen the symptoms.",Ketotifen eye drops,Ketotifen eye drops are the most appropriate initial treatment for allergic conjunctivitis symptoms.,3
+How likely are the options to be chosen by the patient?,Reassurance and continuous monitoring,"The patient's presentation suggests a high likelihood of cardiac ischemia, necessitating stabilization and monitoring.",3
+<|comp|>Common iliac artery aneurysm,Common iliac artery aneurysm,"The ultrasound findings of ureteral and renal pelvis dilation strongly suggest a vascular cause, making the common iliac artery aneurysm the most likely explanation.",5
+2) Propranolol,Clopidogrel,Clopidogrel is the appropriate antiplatelet agent for acute coronary syndrome.,3
+<|comp|>Known liver neoplasm,Active or recurrent pelvic inflammatory disease (PID),Known liver neoplasm is a contraindication for IUD placement due to increased risk of serious complications.,2
+<comp>Erosions of the dental enamel</comp>,Silvery plaques on extensor surfaces,"The answer is incorrect; the ground truth describes silvery plaques, not dental enamel erosion.",1
+"50% A, 50% B, 50% C, 50% D, 50% E",It is an HIV-1/HIV2 antibody differentiation immunoassay,The ground truth accurately describes the confirmatory test performed.,5
+<|comp|>Ruxolitinib,Ruxolitinib,"The JAK2 positive bone marrow biopsy, combined with the patient's symptoms, strongly suggests Myelofibrosis, making Ruxolitinib the most appropriate initial treatment.",5
+"<h2>Genetic Mutation and Medical Conditions</h2> <p>Merlin (MRN 22104) is a gene on chromosome 22 that encodes a tumor suppressor protein. Mutations in this gene are associated with several types of cancer, including renal cell carcinoma, astrocytoma, vascular malformations, and telangiectasias. The type of cancer produced by the mutation in this patient will not be predictable based on other factors such as age, sex, or mode of delivery.</p> <p>Renal cell carcinoma (A) is a well-known malignancy caused by mutations in the catkinin gene.</p> <p>Meningioma (B) refers to an unknown tumor that can occur in any nervous system structure and typically does not have a typical prognosis.</p> <p>Astrocytoma (C) is a rare form of brain cancer caused by mutations in the p53 gene.</p> <p>Vascular malformations (D) are associated with genes such as HLA-CLL, which are involved in vascular claudication and vascular squamous cell carcinoma.</p> <p>Telangiectasias (E) is a rare form of cerebral laceration that can progress to hematoma and hydrocephalus.</p>",Meningioma,The answer correctly identifies meningioma as a condition associated with Merlin mutations.,5
+"20/100
+""An increase in left ventricular end-diastolic pressure""",A reduction in diastolic filling time,"The murmur changes with the patient standing, indicating a shift in venous return pressure.",1
+The correct answer is E) Vaccinia virus,Rotavirus,"Vaccinia virus is known for its ability to accommodate and integrate foreign genetic material, matching the described process.",3
+"How does each option relate to the patient's presentation?
+
+### Stats
+
+Viewing 107 results",Gallbladder cancer,The CT scan revealing a calcified mass near the gallbladder strongly suggests gallbladder cancer as the primary diagnosis to exclude.,5
+"The experimental mediator is associated with a reduction in asthmatic symptoms, which occurs when the patient is exposed to an allergen. This mediated change is prevented by the experimental treatment, which reduces the activity of one of the mediators listed below.
+
+Options:
+{'A': 'IL-5', 'B': 'IL-2', 'C': 'IL-10', 'D': 'IL-13', 'E': 'IL-4'}
+  <|comp|>IL-13",IL-4,The answer correctly identifies IL-4 as the experimental mediator based on the provided text and options.,5
+20%,Matching,The study employed matching to control for confounding variables.,5
+2nd year medical school student,Ibuprofen + colchicine +/- omeprazole,"The patient's presentation and symptoms align with a diagnosis of musculoskeletal chest pain, making ibuprofen + colchicine the most appropriate initial therapy.",5
+<|comp|>Cerebral ischemia,"Benzodiazepine intoxication
+""",The patient's symptoms and lab results strongly suggest ethanol intoxication.,2
+<|comp|>Previous radiation therapy,Previous radiation therapy,Previous radiation therapy is a confirmed risk factor for the patient's NHL.,5
+22q11 deletion,22q11 deletion,"The answer aligns perfectly with the ground truth, reflecting the most likely diagnosis based on the presented clinical information.",5
+<|comp|>Histoplasma capsulatum infection,Histoplasma capsulatum infection,The answer aligns with the provided diagnostic findings (dimorphic fungus with septate hyphae) and the patient's exposure history.,5
+<|comp|>Staphylococcus aureus,Staphylococcus aureus,"The answer aligns with the ground truth, representing the most likely causal microorganism based on the provided clinical information.",5
+100/70 blood pressure,Intubate with mechanical ventilation,"The patient's deteriorating condition warrants immediate respiratory support, as indicated by the ground truth.",5

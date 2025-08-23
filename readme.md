@@ -43,6 +43,7 @@ self hosted in local.
 1. Fine-tuned model is downloaded to local in .gguf format
 2. Modelfile is created for ollama for downloaded model
 3. Install the model in ollama using the model file.
+
 ![alt text](image-1.png)
 
 ### Previewing in verba
@@ -81,9 +82,39 @@ python ragas_eval_data_preparation.py --in .\test_data\test.jsonl --out eval.jso
 concurrency 8 --max_retries 3
 ```
 
+# Rubrics based Scoring
+
+gemma3:4b is used to evaluate the finetuned model
+
 ## run evaluation 
 ```
-python eval_with_ragas_ollama.py --data eval_topk_0.jsonl --out ragas_out --judge_model smallthinker:latest --temperature 0.1
+python custom_eval.py --in eval.jsonl --out eval_scores_context.csv --model gemma3:4b --temperature 0.1
 ```
 
-pip install "ragas>=0.3.0" "langchain-ollama>=0.2.0" "datasets>=2.19.0" "pandas>=2.2.2" "matplotlib>=3.8" "langchain>=0.2.10"
+## Evaluation result (DeepSeek R1 - Distill Qwen 2.5 1.5 B - No RAG)
+# Average Score 4.04 out of 5
+
+Scoring rubric (0..5, 5 is best):
+  - 5: Semantically matches ground truth (or strictly better & consistent with contexts)
+  - 4: Mostly correct & grounded; minor issues
+  - 3: Partially correct; notable gaps; weak grounding
+  - 2: Largely incorrect or ungrounded; contradictions
+  - 1: Mostly wrong or ungrounded
+  - 0: Completely wrong/irrelevant
+
+### Mode: 5
+
+Evaluation model's (reason vs score plot)
+
+![alt text](image-5.png)
+
+
+## Evaluation result (DeepSeek R1 - Distill Qwen 2.5 1.5 B - No RAG)
+# Average Score 3.4 out of 5
+
+The finetuned model scored less with RAG context most probably because of over prompting cauing Hallucination.
+More - Context Engineering is requeries to make the RAG work with the finetuned PEFT model.
+
+Evaluation model's (reason vs score plot)
+
+![alt text](image-6.png)
