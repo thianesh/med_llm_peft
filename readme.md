@@ -56,7 +56,19 @@ Process:
 ![alt text](image-2.png)
 
 ## Testing Suit
-Yet to be build
+eval method of choice
+1. Simple Criteria Scoring
+2. Rubrics based Scoring
+
+N-gram based scoring will be done later
+namely,
+1. ROUGE
+2. BLEU
+
+Semantic scoring - yet to be explored by me
+3. Semantic similarity
+
+![alt text](image-4.png)
 
 ## Cmd to run the Fast API app
 ```
@@ -68,3 +80,10 @@ uvicorn main:app --host 0.0.0.0 --port 9900 --access-log
 python ragas_eval_data_preparation.py --in .\test_data\test.jsonl --out eval.jsonl --endpoint https://medproxy.vldo.in/search --
 concurrency 8 --max_retries 3
 ```
+
+## run evaluation 
+```
+python eval_with_ragas_ollama.py --data eval_topk_0.jsonl --out ragas_out --judge_model smallthinker:latest --temperature 0.1
+```
+
+pip install "ragas>=0.3.0" "langchain-ollama>=0.2.0" "datasets>=2.19.0" "pandas>=2.2.2" "matplotlib>=3.8" "langchain>=0.2.10"
