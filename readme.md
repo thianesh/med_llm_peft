@@ -109,7 +109,7 @@ Evaluation model's (reason vs score plot)
 ![alt text](image-5.png)
 
 
-## Evaluation result (DeepSeek R1 - Distill Qwen 2.5 1.5 B - No RAG)
+## Evaluation result (DeepSeek R1 - Distill Qwen 2.5 1.5 B - With RAG)
 # Average Score 3.4 out of 5
 
 The finetuned model scored less with RAG context most probably because of over prompting cauing Hallucination.
