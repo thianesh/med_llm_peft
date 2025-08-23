@@ -205,6 +205,30 @@ async def search(user_query: str = Query(..., description="User input medical qu
     }
     return JSONResponse(status_code=200, content=out)
 
+@app.get("/search_llm_only")
+async def search(user_query: str = Query(..., description="User input medical query"),
+                 top_k: int = 5,
+                 request: Request = None):
+    request_id = request.headers.get("x-request-id", str(uuid.uuid4()))
+
+    answer = await ollama_generate(user_query, request_id)
+
+    out = {
+        "request_id": request_id,
+        "original_query": user_query,
+        "answer": answer,
+        "rewritten_query": user_query,
+        "retrieved": [],
+        "distances": [],
+        "meta": {
+            "llm_model": LLM_MODEL,
+            "waveate_class": WAVEATE_CLASS,
+            "doc_text_property": DOC_TEXT_PROP,
+            "top_k": 0,
+        },
+    }
+    return JSONResponse(status_code=200, content=out)
+
 
 # ADD these imports near the top with your other imports
 from fastapi.responses import HTMLResponse

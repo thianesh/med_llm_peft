@@ -57,3 +57,14 @@ Process:
 
 ## Testing Suit
 Yet to be build
+
+## Cmd to run the Fast API app
+```
+uvicorn main:app --host 0.0.0.0 --port 9900 --access-log
+```
+
+## cmd to prepare evaluation data given the test data
+```
+python ragas_eval_data_preparation.py --in .\test_data\test.jsonl --out eval.jsonl --endpoint https://medproxy.vldo.in/search --
+concurrency 8 --max_retries 3
+```
